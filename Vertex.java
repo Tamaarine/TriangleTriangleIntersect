@@ -5,6 +5,8 @@ public class Vertex {
     public final int x,y;
     private Vertex next,prev;
     private Color color;
+    private static int counter = 0;
+    private int num;
 
     /**
      * Constructs a vertex
@@ -16,6 +18,8 @@ public class Vertex {
         this.x = x;
         this.y = y;
         color = new Color(170,170,170);
+        num = counter;
+        counter++;
     }
 
     /**
@@ -43,6 +47,9 @@ public class Vertex {
     }
     public Color getColor() {
         return color;
+    }
+    public int getNum() {
+        return num;
     }
     public void setColor(Color color) {
         this.color = color;
